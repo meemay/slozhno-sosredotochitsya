@@ -8,6 +8,10 @@
   --cover-bg-image: url(../images/cover-image-light.png);
 }
 
+.page.theme_light .header__bulb {
+  display: none;
+}
+
 .page.theme_light .content__title {
   color: var(--color-text-primary);
 }
@@ -21,6 +25,10 @@
     --color-accent: #ff8dcb;
     --color-brand: #ffc2e6;
     --cover-bg-image: url(../images/cover-image-light.png);
+  }
+
+  .header__bulb {
+    display: none;
   }
 
   .content__title {
