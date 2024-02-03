@@ -145,10 +145,16 @@
 }
 
 .content__title {
-  min-width: 30vw;
+  inline-size: 30vw;
   color: var(--color-accent);
   font-size: var(--font-size-base);
   font-weight: 700;
+}
+
+.content__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .card {
@@ -238,15 +244,18 @@
     gap: 80px;
   }
 
-  .content__section {
+  .content__section:not(.one-column-content) {
     grid-template-columns: min-content 1fr;
     gap: 20px;
   }
 
+  .content__section.one-column-content .content__title {
+    margin-block-end: 20px;
+  }
 
-  /* .content__title {
-    grid-row: 1 / -1;
-  } */
+  .content__cards {
+    gap: 20px;
+  }
 
   .card {
     margin-block-start: unset;
@@ -274,5 +283,15 @@
       'sunset-pic sunset-pic ice-cream-pic'
       'tape-pic books-pic ice-cream-pic'
       'tape-pic street-pic street-pic';
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .content__section.one-column-content .content__cards {
+    flex-direction: row;
+  }
+
+  .content__section.one-column-content .card {
+    min-inline-size: 30vw;
   }
 }
