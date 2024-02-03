@@ -50,6 +50,7 @@
         >
       </p>
     </header>
+
     <main class="content">
       <section class="content__section">
         <h2 class="content__title">Почему сосредоточиться так сложно</h2>
@@ -155,8 +156,13 @@
             <li class="card__description-content">
               <h4 class="card__description-content-subtitle">Прогуляйтесь</h4>
               <p class="card__description-content-text">
-                Или даже пробегитесь. Лучше найти парк или лес: один эксперимент показал,
-                что созерцание природы повышает концентрацию, в то время как после
+                Или даже пробегитесь. Лучше найти парк или лес: один эксперимент
+                <a
+                  class="link-decor"
+                  href="https://www.sciencedirect.com/science/article/abs/pii/S0272494415000328"
+                  target="_blank"
+                  >показал</a
+                >, что созерцание природы повышает концентрацию, в то время как после
                 просмотра городских пейзажей она наоборот понижается. Можно совместить
                 прогулку с физическими упражнениями или бегом — так в мозг поступит ещё
                 больше кислорода и он будет лучше работать. Но и простая двадцатиминутная
@@ -184,8 +190,41 @@
           </ul>
         </article>
       </section>
+
+      <section class="gallery">
+        <h2 class="gallery__title title-decor">А можно в картинках?</h2>
+        <div class="gallery__image-set">
+          <img
+            src="./images/sunset.png"
+            alt="Закат солнца"
+            class="gallery__image sunset-pic"
+          />
+          <img
+            src="./images/ice-cream.png"
+            alt="Мороженое"
+            class="gallery__image ice-cream-pic"
+          />
+          <img
+            src="./images/tape.png"
+            alt="Пленочная кассета"
+            class="gallery__image tape-pic"
+          />
+          <img
+            src="./images/books.png"
+            alt="Стопка книг, с чашкой кофе наверху"
+            class="gallery__image books-pic"
+          />
+          <img
+            src="./images/street.png"
+            alt="Пустая улица"
+            class="gallery__image street-pic"
+          />
+        </div>
+      </section>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer decorated-zone">
+      <h2 class="footer__title">focus</h2>
+    </footer>
     <script src="./scripts/script.js"></script>
   </body>
 </html>

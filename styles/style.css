@@ -22,10 +22,11 @@
 .link-decor {
   text-decoration: none;
   text-shadow: 2px 2px 0 var(--color-accent);
+  transition: box-shadow 0.2s ease-in-out;
 }
 
-.link:hover {
-  text-decoration: underline;
+.link-decor:hover {
+  box-shadow: 0 1px currentColor;
 }
 
 .decorated-zone::before {
@@ -103,8 +104,14 @@
   cursor: pointer;
 }
 
+.header__theme-menu-button:hover:not(.header__theme-menu-button_active) {
+  outline: 1px solid var(--color-button-hover);
+}
+
 .header__theme-menu-button_active {
   outline: 1px solid currentColor;
+  pointer-events: none;
+  user-select: none;
 }
 
 .header__title {
@@ -138,6 +145,7 @@
 }
 
 .content__title {
+  min-width: 30vw;
   color: var(--color-accent);
   font-size: var(--font-size-base);
   font-weight: 700;
@@ -177,6 +185,42 @@
   font-weight: 400;
 }
 
+.gallery__title {
+  margin-block-end: 10px;
+}
+
+.gallery__image-set {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.gallery__image {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.footer {
+  position: relative;
+  margin-block-start: 40px;
+  padding: var(--content-inline-padding);
+  block-size: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__title {
+  font-size: var(--font-size-brand);
+  font-weight: 700;
+  font-style: normal;
+  color: var(--color-brand);
+  text-shadow: 2px 2px 0 var(--color-accent);
+  line-height: 82.5%;
+}
+
 @media screen and (width >= 768px) {
   :root {
     --content-inline-padding: 20px;
@@ -199,11 +243,36 @@
     gap: 20px;
   }
 
+
   /* .content__title {
-    grid-row: 1/-1;
+    grid-row: 1 / -1;
   } */
 
   .card {
     margin-block-start: unset;
+  }
+
+  .sunset-pic {
+    grid-area: sunset-pic;
+  }
+
+  .ice-cream-pic {
+    grid-area: ice-cream-pic;
+  }
+
+  .tape-pic {
+    grid-area: tape-pic;
+  }
+
+  .street-pic {
+    grid-area: street-pic;
+  }
+
+  .gallery__image-set {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      'sunset-pic sunset-pic ice-cream-pic'
+      'tape-pic books-pic ice-cream-pic'
+      'tape-pic street-pic street-pic';
   }
 }

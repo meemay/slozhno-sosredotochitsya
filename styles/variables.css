@@ -4,6 +4,7 @@
   --font-size-brand: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --content-inline-padding: 10px;
   --color-bg: #000028;
+  --color-button-hover: rgba(255, 0, 112, 0.4);
   --color-text-primary: #f1b2ce;
   --color-text-secondary: var(--color-bg);
   --color-accent: #ff0070;
