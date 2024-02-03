@@ -226,12 +226,18 @@
 
 @media screen and (width >= 768px) {
   .page {
-    --content-inline-padding: 20px; /* not works with themes */
+    --content-inline-padding: 20px;
     --font-size-brand: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .header {
     margin-block-end: 60px;
+  }
+
+  .header__title {
+    position: relative;
+    inset-inline-end: var(--content-inline-padding);
+    inline-size: calc(100% + (var(--content-inline-padding) * 2));
   }
 
   .header__description {
@@ -250,7 +256,7 @@
   .content__section.newspaper-style-content .content__title {
     margin-block-end: 20px;
     min-inline-size: unset;
-    max-inline-size: calc(30.5vw - 20px);
+    max-inline-size: calc(30.5vw - var(--content-inline-padding));
   }
 
   .content__cards {
