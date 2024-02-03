@@ -250,7 +250,8 @@
 
   .content__section.one-column-content .content__title {
     margin-block-end: 20px;
-    max-inline-size: 30vw;
+    min-inline-size: unset;
+    max-inline-size: calc(30vw - 20px);
   }
 
   .content__cards {
@@ -293,5 +294,9 @@
 
   .content__section.one-column-content .content__title {
     max-inline-size: 30vw;
+  }
+
+  .gallery__image-set {
+    gap: 20px;
   }
 }
