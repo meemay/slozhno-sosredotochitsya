@@ -305,7 +305,7 @@
   .content__section.newspaper-style-content .content__cards {
     display: grid;
     align-items: start;
-    grid-template-columns: repeat(3, minmax(30.5vw, 1fr));
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .content__section.newspaper-style-content .card__title {
