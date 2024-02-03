@@ -1,5 +1,4 @@
 .page.theme_light {
-  --font-size-brand: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --color-bg: #fff1f7;
   --color-button-hover: rgba(50, 49, 45, 0.4);
   --color-text-primary: #353430;
