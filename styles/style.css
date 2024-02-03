@@ -156,8 +156,8 @@
 
 .card {
   margin-block-start: 20px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 10px;
 }
 
@@ -297,11 +297,16 @@
 
 @media screen and (width >= 1024px) {
   .content__section.newspaper-style-content .content__cards {
-    flex-direction: row;
+    display: grid;
+    align-items: start;
+    grid-template-columns: repeat(3, minmax(30.5vw, 1fr));
+  }
+
+  .content__section.newspaper-style-content .card__title {
+    align-self: center;
   }
 
   .content__section.newspaper-style-content .content__title {
     max-inline-size: 30.5vw;
   }
-
 }
