@@ -145,7 +145,7 @@
 }
 
 .content__title {
-  inline-size: 30vw;
+  min-inline-size: 30vw;
   color: var(--color-accent);
   font-size: var(--font-size-base);
   font-weight: 700;
@@ -154,7 +154,6 @@
 .content__cards {
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 
 .card {
@@ -251,6 +250,7 @@
 
   .content__section.one-column-content .content__title {
     margin-block-end: 20px;
+    max-inline-size: 30vw;
   }
 
   .content__cards {
@@ -291,7 +291,7 @@
     flex-direction: row;
   }
 
-  .content__section.one-column-content .card {
-    min-inline-size: 30vw;
+  .content__section.one-column-content .content__title {
+    max-inline-size: 30vw;
   }
 }
