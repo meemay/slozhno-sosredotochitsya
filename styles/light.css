@@ -4,6 +4,7 @@
   --color-text-secondary: var(--color-text-primary);
   --color-accent: #ff8dcb;
   --color-brand: #ffc2e6;
+  --color-brand-shadow: #ff0070;
   --color-button-primary: var(--color-text-primary);
   --color-button-hover: rgba(50, 49, 45, 0.4);
   --cover-bg-image: url(../images/cover-image-light.png);
@@ -24,6 +25,7 @@
     --color-text-secondary: var(--color-text-primary);
     --color-accent: #ff8dcb;
     --color-brand: #ffc2e6;
+    --color-brand-shadow: #ff0070;
     --color-button-primary: var(--color-text-primary);
     --color-button-hover: rgba(50, 49, 45, 0.4);
     --cover-bg-image: url(../images/cover-image-light.png);
