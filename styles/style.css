@@ -18,6 +18,10 @@
   line-height: 130%;
 }
 
+.title-decor-lite {
+  font-weight: 400;
+}
+
 .link-decor {
   text-decoration: none;
   text-shadow: 2px 2px 0 var(--color-accent);
@@ -28,26 +32,26 @@
   box-shadow: 0 1px currentColor;
 }
 
-.decorated-zone::before {
-  position: absolute;
-  inline-size: 25px;
-  block-size: 25px;
-  inset-block-start: var(--content-inline-padding);
-  inset-inline-end: var(--content-inline-padding);
-  border-block-start: 1px solid var(--color-brand-decor);
-  border-inline-end: 1px solid var(--color-brand-decor);
-  content: '';
-}
-
+.decorated-zone::before,
 .decorated-zone::after {
   position: absolute;
   inline-size: 25px;
   block-size: 25px;
+  content: '';
+}
+
+.decorated-zone::before {
+  inset-block-start: var(--content-inline-padding);
+  inset-inline-end: var(--content-inline-padding);
+  border-block-start: 1px solid var(--color-brand-decor);
+  border-inline-end: 1px solid var(--color-brand-decor);
+}
+
+.decorated-zone::after {
   inset-inline-start: var(--content-inline-padding);
   inset-block-end: var(--content-inline-padding);
   border-block-end: 1px solid var(--color-brand-decor);
   border-inline-start: 1px solid var(--color-brand-decor);
-  content: '';
 }
 
 /* header */
@@ -149,6 +153,7 @@
 }
 
 .content__title {
+  margin-block-end: 20px;
   min-inline-size: var(--content-heading-block-size);
   color: var(--color-text-content-heading);
   font-size: var(--font-size-base);
@@ -158,13 +163,17 @@
 .content__cards {
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 
 .card {
-  margin-block-start: 20px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
+}
+
+.card_extended-gap {
+  gap: 20px;
 }
 
 .card__title {
@@ -175,23 +184,6 @@
   font-size: var(--font-size-base);
   font-weight: 400;
   line-height: 130%;
-}
-
-.card__description-content {
-  margin-block-start: 10px; /* card gap excluded */
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.card__description-content:not(:last-child) {
-  margin-block-end: 20px;
-}
-
-.card__description-content-subtitle {
-  background-color: var(--color-accent);
-  color: var(--color-text-secondary);
-  font-weight: 400;
 }
 
 .gallery__title {
@@ -271,14 +263,6 @@
     max-inline-size: calc(
       var(--content-heading-block-size) - var(--content-inline-padding)
     );
-  }
-
-  .content__cards {
-    gap: 20px;
-  }
-
-  .card {
-    margin-block-start: unset;
   }
 
   .gallery__images-picture_sunset {
