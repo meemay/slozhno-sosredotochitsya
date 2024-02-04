@@ -149,7 +149,7 @@
 }
 
 .content__title {
-  min-inline-size: 30.5vw;
+  min-inline-size: var(--content-heading-block-size);
   color: var(--color-text-content-heading);
   font-size: var(--font-size-base);
   font-weight: 700;
@@ -198,13 +198,14 @@
   margin-block-end: 10px;
 }
 
-.gallery__image-set {
+.gallery__images {
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
 }
 
-.gallery__image {
+.gallery__images-picture {
+  display: block;
   inline-size: 100%;
   block-size: 100%;
   object-fit: cover;
@@ -267,7 +268,9 @@
   .content__section.newspaper-style-content .content__title {
     margin-block-end: 20px;
     min-inline-size: unset;
-    max-inline-size: calc(30.5vw - var(--content-inline-padding));
+    max-inline-size: calc(
+      var(--content-heading-block-size) - var(--content-inline-padding)
+    );
   }
 
   .content__cards {
@@ -278,37 +281,37 @@
     margin-block-start: unset;
   }
 
-  .sunset-pic {
-    grid-area: sunset-pic;
+  .gallery__images-picture_sunset {
+    grid-area: sunset;
   }
 
-  .ice-cream-pic {
-    grid-area: ice-cream-pic;
+  .gallery__images-picture_ice-cream {
+    grid-area: ice-cream;
   }
 
-  .tape-pic {
-    grid-area: tape-pic;
+  .gallery__images-picture_tape {
+    grid-area: tape;
   }
 
-  .books-pic {
-    grid-area: books-pic;
+  .gallery__images-picture_books {
+    grid-area: books;
   }
 
-  .street-pic {
-    grid-area: street-pic;
+  .gallery__images-picture_street {
+    grid-area: street;
   }
 
   .gallery__title {
     margin-block-end: 20px;
   }
 
-  .gallery__image-set {
+  .gallery__images {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     grid-template-areas:
-      'sunset-pic sunset-pic ice-cream-pic'
-      'tape-pic books-pic ice-cream-pic'
-      'tape-pic street-pic street-pic';
+      'sunset sunset ice-cream'
+      'tape books ice-cream'
+      'tape street street';
   }
 
   .footer {
@@ -337,6 +340,6 @@
   }
 
   .content__section.newspaper-style-content .content__title {
-    max-inline-size: 30.5vw;
+    max-inline-size: var(--content-heading-block-size);
   }
 }
