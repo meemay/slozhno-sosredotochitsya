@@ -1,10 +1,11 @@
 .page.theme_light {
   --color-bg: #fff1f7;
-  --color-button-hover: rgba(50, 49, 45, 0.4);
   --color-text-primary: #353430;
   --color-text-secondary: var(--color-text-primary);
   --color-accent: #ff8dcb;
   --color-brand: #ffc2e6;
+  --color-button-primary: var(--color-text-primary);
+  --color-button-hover: rgba(50, 49, 45, 0.4);
   --cover-bg-image: url(../images/cover-image-light.png);
 }
 
@@ -19,11 +20,12 @@
 @media (prefers-color-scheme: light) {
   .page {
     --color-bg: #fff1f7;
-    --color-button-hover: rgba(50, 49, 45, 0.4);
     --color-text-primary: #353430;
     --color-text-secondary: var(--color-text-primary);
     --color-accent: #ff8dcb;
     --color-brand: #ffc2e6;
+    --color-button-primary: var(--color-text-primary);
+    --color-button-hover: rgba(50, 49, 45, 0.4);
     --cover-bg-image: url(../images/cover-image-light.png);
   }
 
