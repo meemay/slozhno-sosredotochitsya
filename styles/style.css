@@ -1,4 +1,5 @@
 .page {
+  max-inline-size: calc(1440px - var(--content-inline-padding));
   font-family: var(--font-family-primary);
   color: var(--color-text-primary);
   background-color: var(--color-bg);
@@ -33,8 +34,8 @@
   block-size: 25px;
   inset-block-start: var(--content-inline-padding);
   inset-inline-end: var(--content-inline-padding);
-  border-block-start: 1px solid var(--color-accent);
-  border-inline-end: 1px solid var(--color-accent);
+  border-block-start: 1px solid var(--color-brand-decor);
+  border-inline-end: 1px solid var(--color-brand-decor);
   content: '';
 }
 
@@ -44,8 +45,8 @@
   block-size: 25px;
   inset-inline-start: var(--content-inline-padding);
   inset-block-end: var(--content-inline-padding);
-  border-block-end: 1px solid var(--color-accent);
-  border-inline-start: 1px solid var(--color-accent);
+  border-block-end: 1px solid var(--color-brand-decor);
+  border-inline-start: 1px solid var(--color-brand-decor);
   content: '';
 }
 
@@ -78,7 +79,7 @@
   block-size: 12px;
   border-radius: 50%;
   background-color: var(--color-accent);
-  filter: drop-shadow(0 0 4px var(--color-accent));
+  box-shadow: 0 0 4px 2px var(--color-accent);
 }
 
 .header__theme-menu {
@@ -149,7 +150,7 @@
 
 .content__title {
   min-inline-size: 30.5vw;
-  color: var(--color-accent);
+  color: var(--color-text-content-heading);
   font-size: var(--font-size-base);
   font-weight: 700;
 }
@@ -287,6 +288,10 @@
 
   .tape-pic {
     grid-area: tape-pic;
+  }
+
+  .books-pic {
+    grid-area: books-pic;
   }
 
   .street-pic {
