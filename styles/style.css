@@ -186,8 +186,9 @@
   line-height: 130%;
 }
 
-.gallery__title {
-  margin-block-end: 10px;
+.gallery {
+  display: grid;
+  gap: 10px;
 }
 
 .gallery__images {
@@ -284,8 +285,8 @@
     grid-area: street;
   }
 
-  .gallery__title {
-    margin-block-end: 20px;
+  .gallery {
+    gap: 20px;
   }
 
   .gallery__images {
