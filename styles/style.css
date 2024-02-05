@@ -150,10 +150,10 @@
 .content__section {
   display: grid;
   grid-template-columns: 1fr;
+  gap: 20px;
 }
 
 .content__title {
-  margin-block-end: 20px;
   min-inline-size: var(--content-heading-block-size);
   color: var(--color-text-content-heading);
   font-size: var(--font-size-base);
@@ -258,7 +258,6 @@
   }
 
   .content__section.newspaper-style-content .content__title {
-    margin-block-end: 20px;
     min-inline-size: unset;
     max-inline-size: calc(
       var(--content-heading-block-size) - var(--content-inline-padding)
